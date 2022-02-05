@@ -1,0 +1,39 @@
+
+This question is asked by Google. Given a string, reverse all of its characters and return the resulting string.
+
+Ex: Given the following strings...
+
+“Cat”, return “taC”
+“The Daily Byte”, return "etyB yliaD ehT”
+“civic”, return “civic”
+
+
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+   int i,temp,len;
+   char st[100];
+   cout << "Enter the string\n" << endl;
+   cin.getline(st,100);
+   
+   len = strlen(st);
+   
+   for(i=0;i<len/2;i++)
+   {
+       
+         temp = st[i];
+         st[i] = st[len-1-i];
+         st[len-1-i] = temp;
+         
+   }
+   
+   cout << "the reverse string is " << st;
+   
+   
+   
+   return 0;
+}
