@@ -1,0 +1,44 @@
+
+
+
+/**
+  * This question is asked by Google. Given a string, return whether or not it uses capitalization correctly. A string correctly uses capitalization if all letters are capitalized, no letters are capitalized, or only the first letter is capitalized.
+  *
+  * Ex: Given the following strings...
+  * "USA", return true
+  * "Calvin", return true
+  * "compUter", return false
+  * "coding", return true
+  */
+
+
+// Question: https://leetcode.com/problems/detect-capital/
+// Solutions
+
+
+
+
+
+class Solution {
+public:
+    bool detectCapitalUse(string s) {
+        
+     int i;
+        int upper =0;
+        int n = s.length();
+    for(i=0;i<s.length();i++)
+    
+        if(s[i] >= 'A' && s[i] <= 'Z')
+        
+            upper++;
+        
+        
+        if(upper == n or upper == 0 or (s[0] >= 'A' and s[0] <= 'Z' and upper == 1))
+        
+            return true;
+        
+       
+    
+       return false;  
+    }
+};
