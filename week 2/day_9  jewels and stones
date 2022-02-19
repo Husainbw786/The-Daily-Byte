@@ -1,0 +1,32 @@
+
+
+/**
+  * This question is asked by Amazon. Given a string representing your stones and another string representing a list of jewels, return the number of stones that you have that are also jewels.
+  *
+  * Ex: Given the following jewels and stones...
+  *
+  * jewels = "abc", stones = "ac", return 2
+  * jewels = "Af", stones = "AaaddfFf", return 3
+  * jewels = "AYOPD", stones = "ayopd", return 0
+  */
+// Question: https://leetcode.com/problems/jewels-and-stones/
+// Solution:
+
+
+
+
+class Solution {
+public:
+    int numJewelsInStones(string j, string s) {
+        int i;
+        unordered_map<char,int>mp;
+        for( i=0;j[i] != '\0';i++)
+            mp[j[i]]++;
+        int count =0;
+        for(i=0; s[i] != '\0';i++)
+            if(mp.find(s[i]) != mp.end())
+                count++;
+        
+        return count;
+    }
+};
