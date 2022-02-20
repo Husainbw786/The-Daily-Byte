@@ -9,35 +9,42 @@ Ex: Given the following strings...
 
 
 
-#include <bits/stdc++.h>
-
-using namespace std;
-
-int main()
-{
-   int right_up=0,left_down=0,result=0,i;
-   string str;
-   cin >> str;
-   
-   int len = str.length();
-   for( i=0;i<len;i++)
-   {
-       if(str[i] == 'R' || str[i] == 'U')
-       {
-           right_up++;
-       }
-       else 
-       {
-           left_down++;
-       }
-   }
-   
-   result = right_up - left_down;
-   if(result == 0)
-   {
-       cout << "true";
-   }
-   else 
+class Solution {
+public:
+    bool judgeCircle(string s) {
+        
+        int i,up_down = 0,right_left = 0;
+        for(i=0;i<s.length();i++)
+        {
+            if(s[i] == 'U')
+            {
+                up_down++; 
+            }
+            else if(s[i] == 'D')
+            {
+                up_down--;
+            }
+            else if(s[i] == 'R')
+            {
+                right_left++;
+            }
+            else if(s[i] == 'L')
+            {
+                right_left--;
+            }
+        }
+        
+      
+        if(right_left == 0 && up_down == 0)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }       
+    }
+};
    {
        cout << "false";
    }
