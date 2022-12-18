@@ -1,53 +1,35 @@
-
-//This question is asked by Amazon. Given a string representing the sequence of moves a robot vacuum makes, return whether or not it will return to its original position. The string will only contain L, R, U, and D characters, representing left, right, up, and down respectively.
-
-Ex: Given the following strings...
-
-"LR", return true
-"URURD", return false
-"RUULLDRD", return true
-
-
-
 class Solution {
 public:
-    bool judgeCircle(string s) {
+    bool judgeCircle(string moves) {
         
-        int i,up_down = 0,right_left = 0;
-        for(i=0;i<s.length();i++)
+        int up_down = 0;
+        int right_left = 0;
+        
+        int i;
+        int n = moves.size();
+        for(i=0;i<n;i++)
         {
-            if(s[i] == 'U')
+            if(moves[i] == 'U')
             {
-                up_down++; 
+                up_down++;
             }
-            else if(s[i] == 'D')
-            {
-                up_down--;
-            }
-            else if(s[i] == 'R')
+            else if(moves[i] == 'R')
             {
                 right_left++;
             }
-            else if(s[i] == 'L')
+            else if(moves[i] == 'L')
             {
                 right_left--;
             }
+            else if(moves[i] == 'D')
+            {
+                up_down--;
+            }
         }
-        
-      
-        if(right_left == 0 && up_down == 0)
+        if(up_down == 0 && right_left == 0)
         {
             return true;
         }
-        else 
-        {
-            return false;
-        }       
+        return false;
     }
 };
-   {
-       cout << "false";
-   }
-   
-   return 0;
-}
