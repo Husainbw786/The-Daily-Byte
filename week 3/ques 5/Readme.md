@@ -3,8 +3,8 @@ Note: a cycle is a circular arrangement (i.e. one node points back to a previous
 
 Ex: Given the following linked lists...      
 
-1->2->3->1 -> true (3 points back to 1)
-1->2->3 -> false    
-1->1 true (1 points to itself)   
-Thanks,
+1->2->3->1 -> true (3 points back to 1)                    
+1->2->3 -> false                                       
+1->1 true (1 points to itself)      
+Thanks,     
 The Daily Byte
