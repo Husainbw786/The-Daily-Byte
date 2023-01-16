@@ -3,10 +3,10 @@ Note: the lowest common ancestor of two nodes is the deepest node within the tre
 
 Ex: Given the following tree...   
     7   
-   / \   
-  2   9   
- / \    
-1   5   
+   /  \   
+  2    9   
+ /  \    
+1    5   
   
 and a = 1, b = 9, return a reference to the node containing 7.
 Ex: Given the following tree...
